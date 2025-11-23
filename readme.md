@@ -54,7 +54,7 @@ git clone https://github.com/KeerthanaAnandhan/voice-agent-demo
 
 ---
 
-## ⚡ Live Demo
+## ⚡ Live Demo 
 
 You can host the demo via **GitHub Pages**:
 
@@ -62,8 +62,9 @@ You can host the demo via **GitHub Pages**:
 2. Select the main branch → Save
 3. Visit the provided URL to test the live demo.
 
-Demo link: 
+Demo link: https://keerthanaanandhan.github.io/voice-agent-demo/
 ---
 
 
 Made with ❤️ using **HTML, CSS & JavaScript**
+
