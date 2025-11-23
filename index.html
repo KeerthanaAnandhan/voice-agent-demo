@@ -1,0 +1,181 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AgentPlay — Voice Agent Demo</title>
+
+  <!-- Google fonts -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Local stylesheet -->
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- DEMO MODAL -->
+  <div id="demoModal" class="modal hidden" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-content" role="document">
+      <button class="close-modal" id="closeModal" aria-label="Close demo">&times;</button>
+
+
+  <div class="hero-card">
+    <h3>Live voice demo</h3>
+    <p class="muted">Speak or type — watch the agent respond.</p>
+
+    <div class="demo-area">
+      <textarea id="demoInput" placeholder="Type a command or press the mic and speak..." rows="3"></textarea>
+
+      <div class="demo-controls">
+        <button id="micBtn" class="btn mic">🎤 Start</button>
+        <button id="speakBtn" class="btn">🔊 Speak Response</button>
+        <button id="clearBtn" class="btn ghost">Clear</button>
+        <button id="sendBtn" class="btn primary">Send</button>
+      </div>
+
+      <div class="demo-output" id="demoOutput" aria-live="polite"></div>
+    </div>
+
+    <small class="muted">This demo uses browser speech APIs — works best on Chrome/Edge.</small>
+  </div>
+</div>
+
+  </div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="brand">AgentPlay</h1>
+      <nav class="nav">
+        <a href="#features">Features</a>
+        <button id="openDemoBtn" class="btn primary" aria-haspopup="dialog">Try the Live Demo</button>
+        <a href="#pricing" class="btn ghost">See Pricing</a>
+        <a href="#contact" class="cta nav-cta">Get Early Access</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <h2>10x voice agents that replace repetitive processes</h2>
+          <p>Ship voice-enabled automations that answer calls, schedule, qualify leads and reduce manual work.</p>
+          <div class="hero-cta">
+            <button id="openDemoBtnHero" class="btn primary">Try the Live Demo</button>
+            <a href="#pricing" class="btn ghost">See Pricing</a>
+          </div>
+          <ul class="trust-row">
+            <li><strong>Early access</strong></li>
+            <li><strong>For startups</strong></li>
+            <li><strong>Works in browser</strong></li>
+          </ul>
+        </div>
+    <div class="hero-card" id="demo-preview">
+      <h3>Live voice demo (preview)</h3>
+      <p class="muted">Speak or type — watch the agent respond.</p>
+
+      <div class="demo-area">
+        <textarea id="demoInputPreview" placeholder="Quick try — click Try the Live Demo for full modal." rows="3" readonly></textarea>
+
+        <div class="demo-controls">
+          <button class="btn mic ghost" disabled><i class="fa-solid fa-microphone"></i> </button>
+          <button class="btn ghost" disabled><i class="fa-solid fa-volume-high"></i> </button>
+          <button class="btn ghost" disabled>Clear</button>
+        </div>
+
+        <div class="demo-output muted">Open the live demo to interact.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="container features" id="features">
+  <h2 class="section-title">Features</h2>
+  <div class="features-grid">
+    <article class="feature-card">
+      <h4><i class="fa-solid fa-phone-volume" style="color:var(--accent); margin-right:8px;"></i> Automate Voice Flows</h4>
+      <p>Trigger actions, update CRMs, and qualify leads using natural speech.</p>
+    </article>
+    <article class="feature-card">
+      <h4><i class="fa-solid fa-bolt" style="color:var(--accent); margin-right:8px;"></i> Low-latency Demo</h4>
+      <p>In-browser demo to show value instantly — no install needed.</p>
+    </article>
+    <article class="feature-card">
+      <h4><i class="fa-solid fa-plug" style="color:var(--accent); margin-right:8px;"></i> Integrations</h4>
+      <p>Easy webhooks and Zapier-ready endpoints (future-ready).</p>
+    </article>
+    <article class="feature-card">
+      <h4><i class="fa-solid fa-shield-halved" style="color:var(--accent); margin-right:8px;"></i> Custom SLA</h4>
+      <p>Enterprise-grade routing and fallback with analytics.</p>
+    </article>
+  </div>
+</section>
+
+<!-- Pricing section update -->
+
+<section class="container pricing" id="pricing">
+  <h2 class="section-title">Pricing</h2>
+  <div class="pricing-grid">
+    <div class="price-card">
+      <h3>Starter</h3>
+      <p class="price">Free</p>
+      <ul class="price-features">
+        <li><i class="fa-solid fa-user"></i> 1 demo agent</li>
+        <li><i class="fa-solid fa-chart-simple"></i> Basic analytics</li>
+      </ul>
+      <a class="btn primary btn-full" href="#contact">Request Trial</a>
+    </div>
+    <div class="price-card popular">
+      <h3>Startup</h3>
+      <p class="price">₹2,999 / month</p>
+      <ul class="price-features">
+        <li><i class="fa-solid fa-users"></i> 5 agents</li>
+        <li><i class="fa-solid fa-plug"></i> Webhook integrations</li>
+      </ul>
+      <a class="btn primary btn-full" href="#contact">Get Started</a>
+    </div>
+    <div class="price-card">
+      <h3>Custom</h3>
+      <p class="price">Contact</p>
+      <ul class="price-features">
+        <li><i class="fa-solid fa-crown"></i> Enterprise features</li>
+        <li><i class="fa-solid fa-shield-halved"></i> SLAs & dedicated support</li>
+      </ul>
+      <a class="btn ghost btn-full" href="#contact">Contact Sales</a>
+    </div>
+  </div>
+</section>
+
+
+<section class="container contact" id="contact">
+  <h2 class="section-title">Contact / Early access</h2>
+  <p>Leave your email and a short note — we’ll reach out with early access.</p>
+  <form id="contactForm" class="contact-form">
+    <input type="email" id="email" placeholder="your@company.com" required />
+    <input type="text" id="company" placeholder="Company (optional)" />
+    <button class="btn primary" type="submit">Request Access</button>
+  </form>
+  <p id="formMsg" class="muted"></p>
+</section>
+
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> AgentPlay</div>
+      <div class="foot-links">Built with HTML • CSS • JS</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

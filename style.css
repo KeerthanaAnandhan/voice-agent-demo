@@ -1,0 +1,340 @@
+/* CLEAN SAAS THEME — SORA FONT (improved spacing, mobile-friendly) */
+
+:root{
+  --bg:#f6f8fc; --card:#fff; --accent:#2563eb; --accent-dark:#1d4ed8;
+  --heading:#1e293b; --text:#475569; --muted:#6b7280; --border:#e2e8f0;
+  --radius:14px; --shadow:0 6px 20px rgba(0,0,0,0.06); --maxw:1200px;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+
+/* body */
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:"Sora","Inter",system-ui,Arial;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* REMOVE TEXT DECORATION + LIST STYLE */
+a{text-decoration:none;color:inherit}
+ul, li{list-style:none;margin:0;padding:0}
+
+/* layout */
+.container{max-width:var(--maxw);margin:0 auto;padding:0 18px}
+
+/* header */
+.site-header{
+  background:#fff;
+  box-shadow:var(--shadow);
+  position:sticky;top:0;z-index:50;
+}
+.header-inner{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:18px 0;
+}
+.brand{font-size:28px;font-weight:700;color:var(--accent)}
+.nav{display:flex;gap:14px;align-items:center}
+.nav .cta{
+  background:var(--accent);
+  color:#fff;
+  padding:10px 14px;
+  border-radius:10px;
+}
+
+/* hero */
+.hero{padding:64px 0}
+.hero-grid{display:grid;grid-template-columns:1fr 420px;gap:32px}
+
+.hero-text h2{
+  font-size:38px;line-height:1.15;
+  color:var(--heading);
+  margin-bottom:14px;
+}
+.hero-text p{
+  color:var(--muted);
+  margin-bottom:20px;
+}
+.hero-cta{display:flex;gap:12px}
+
+.btn{
+  padding:12px 16px;
+  border-radius:12px;
+  font-weight:600;
+  border:none;
+  cursor:pointer;
+}
+.btn.primary{background:var(--accent);color:#fff}
+.btn.primary:hover{background:var(--accent-dark)}
+.btn.ghost{background:#fff;border:1px solid var(--accent);color:var(--accent)}
+
+.trust-row{
+  display:flex;gap:10px;margin-top:16px;
+  color:var(--muted);font-size:14px;
+}
+
+/* --- IMPROVED LIVE DEMO SPACING --- */
+
+.hero-card {
+  background: var(--card);
+  padding: 26px;               /* increased from 22px */
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;                   /* increased spacing between elements */
+}
+
+/* LIVE DEMO — Improved spacing */
+#demoInput{
+  width:100%;
+  padding:14px 16px;            /* increased padding */
+  border-radius:12px;
+  border:1px solid var(--border);
+  resize:none;
+  min-height:110px;             /* more comfortable height */
+  line-height:1.5;
+}
+
+.demo-controls{
+  display:flex;
+  gap:14px;                     /* better spacing between buttons */
+  flex-wrap:wrap;
+  margin-top:12px;              /* added spacing above buttons */
+}
+
+.demo-controls .btn{
+  flex:1;
+  min-width:120px;
+  padding:14px 0;               /* taller buttons */
+  font-size:15px;
+}
+
+.demo-output{
+  background:#fbfdff;
+  padding:16px 18px;            /* more breathing room */
+  border-radius:12px;
+  border:1px solid var(--border);
+  min-height:110px;             /* match the input height */
+  color:var(--text);
+  white-space:pre-wrap;
+  margin-top:12px;              /* spacing between buttons → output */
+  line-height:1.5;
+}
+
+/* MODAL IMPROVED SPACING */
+.modal-content{
+  background:#fff;
+  padding:24px 26px;            /* increased inner spacing */
+  border-radius:14px;
+  width:100%;
+  max-width:560px;
+  position:relative;
+  box-shadow:var(--shadow);
+}
+
+.modal-content h2{
+  margin-bottom:14px;           /* spacing under modal title */
+}
+
+.modal-content textarea{
+  width:100%;
+  padding:14px 16px;
+  border-radius:12px;
+  border:1px solid var(--border);
+  resize:none;
+  min-height:110px;
+  margin-bottom:14px;           /* spacing under input */
+  line-height:1.5;
+}
+
+.modal-content .demo-output{
+  margin-top:14px;              /* spacing above output */
+  min-height:110px;
+  padding:16px 18px;
+}
+
+/* Improve spacing between modal buttons */
+.modal-content .demo-controls{
+  margin-top:14px;
+  gap:14px;
+}
+
+
+/* Features */
+.features{margin-top:60px}
+.section-title{
+  font-size:28px;color:var(--heading);
+  margin-bottom:22px;
+}
+.features-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:20px;
+}
+.feature-card{
+  background:#fff;padding:20px;
+  border-radius:12px;
+  box-shadow:var(--shadow);
+}
+
+/* Pricing */
+.pricing{margin-top:48px}
+.pricing-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(260px,1fr));
+  gap:20px;
+}
+.price-card{
+  background:#fff;padding:24px;
+  border-radius:12px;
+  box-shadow:var(--shadow);
+  display:flex;flex-direction:column;
+  gap:16px;
+  border:1px solid var(--border);
+  position:relative;
+}
+.price-card.popular{
+  border:2px solid var(--accent);
+}
+
+/* popular badge */
+.price-card.popular::before{
+  content:"Most Popular";
+  position:absolute;left:50%;top:-12px;
+  transform:translateX(-50%);
+  background:var(--accent);color:#fff;
+  padding:6px 12px;
+  border-radius:999px;
+  font-size:12px;
+}
+
+/* contact */
+.contact{margin-top:50px}
+.contact-form{
+  max-width:480px;
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+  margin-top:14px;
+}
+.contact-form input{
+  padding:12px;border-radius:10px;
+  border:1px solid var(--border);
+}
+
+/* footer */
+.site-footer{
+  padding:30px 0;text-align:center;
+  color:var(--muted);margin-top:50px;
+}
+
+/* modal */
+.modal{
+  position:fixed;inset:0;
+  background:rgba(0,0,0,0.55);
+  backdrop-filter:blur(4px);
+  display:flex;align-items:center;justify-content:center;
+  padding:20px;z-index:6000;
+}
+.modal.hidden{display:none}
+
+.modal-content{
+  background:#fff;
+  padding:22px;
+  border-radius:12px;
+  width:100%;
+  max-width:560px;
+  position:relative;
+  box-shadow:var(--shadow);
+  animation:pop .22s ease-out;
+}
+.close-modal{
+  position:absolute;
+  right:14px;top:12px;
+  font-size:26px;
+  background:none;border:none;
+  cursor:pointer;color:var(--muted);
+}
+
+@keyframes pop{
+  from{transform:scale(.95);opacity:0}
+  to{transform:scale(1);opacity:1}
+}
+
+/* responsive */
+@media (max-width:900px){
+  .nav{display:none}
+  .hero-grid{grid-template-columns:1fr}
+  .features-grid{grid-template-columns:1fr}
+  .pricing-grid{grid-template-columns:1fr}
+  .hero{padding:40px 0}
+  .hero-text h2{font-size:28px}
+  
+  .hero-card{
+    padding:24px;                /* optimized for mobile */
+    gap:14px;
+  }
+
+  #demoInput{min-height:80px}
+  .demo-output{min-height:80px}
+}
+
+/* Pricing section improvements */
+.price-card ul {
+padding-left:0;
+margin-bottom:12px;
+}
+.price-card li {
+display:flex;
+align-items:center;
+gap:10px;
+margin-bottom:10px;
+font-size:15px;
+color:var(--text);
+}
+.btn-full {
+width:100%;
+display:flex;
+justify-content:center;
+align-items:center;
+gap:8px;
+transition: all 0.2s ease;
+}
+
+/* Button hover effects */
+.btn.primary:hover {
+background: var(--accent-dark);
+transform: translateY(-2px);
+}
+.btn.ghost:hover {
+background: var(--accent);
+color: #fff;
+transform: translateY(-2px);
+}
+
+/* Card hover effect */
+.price-card:hover {
+transform: translateY(-4px);
+box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+transition: all 0.25s ease;
+}
+
+/* Feature card hover */
+.feature-card:hover {
+transform: translateY(-4px);
+box-shadow:0 10px 25px rgba(0,0,0,0.06);
+transition: all 0.25s ease;
+}
+
+/* Hero CTA hover */
+.hero-cta .btn.primary:hover {
+background: var(--accent-dark);
+transform: translateY(-2px);
+}
+.hero-cta .btn.ghost:hover {
+background: var(--accent);
+color:#fff;
+transform: translateY(-2px);
+}
